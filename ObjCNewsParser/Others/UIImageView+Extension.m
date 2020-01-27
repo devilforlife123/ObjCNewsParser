@@ -15,6 +15,7 @@
     __block NSURLSession * session = [NSURLSession sharedSession];
     __block NSURLSessionDownloadTask * downloadTask;
     
+    //THis is just to bring the branches together
     
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
         __weak UIImageView * weakSelf = self;
