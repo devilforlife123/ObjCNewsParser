@@ -13,6 +13,7 @@
 		D699173123DF6EF400A44066 /* ObjCNewsParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D699173023DF6EF400A44066 /* ObjCNewsParserTests.m */; };
 		D699173C23DF6EF400A44066 /* ObjCNewsParserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D699173B23DF6EF400A44066 /* ObjCNewsParserUITests.m */; };
 		D699175223DF6FAB00A44066 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175123DF6FAB00A44066 /* MainTableViewController.m */; };
+		D699175723DF718800A44066 /* NewsFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175623DF718800A44066 /* NewsFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		D699174F23DF6F5A00A44066 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D699175023DF6FAB00A44066 /* MainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		D699175123DF6FAB00A44066 /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		D699175523DF718800A44066 /* NewsFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsFetcher.h; sourceTree = "<group>"; };
+		D699175623DF718800A44066 /* NewsFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 		D699174C23DF6EFC00A44066 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D699175523DF718800A44066 /* NewsFetcher.h */,
+				D699175623DF718800A44066 /* NewsFetcher.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			files = (
 				D699175223DF6FAB00A44066 /* MainTableViewController.m in Sources */,
 				D699171623DF6EF200A44066 /* AppDelegate.m in Sources */,
+				D699175723DF718800A44066 /* NewsFetcher.m in Sources */,
 				D699172723DF6EF400A44066 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

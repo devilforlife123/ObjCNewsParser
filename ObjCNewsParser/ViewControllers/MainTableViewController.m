@@ -7,8 +7,13 @@
 //
 
 #import "MainTableViewController.h"
+#import "NewsFetcher.h"
+#import "Constants.h"
 
 @interface MainTableViewController ()
+@property(nonatomic,strong)NSArray * newsFeed;
+@property(nonatomic,strong)NewsFetcher * newsFetcher;
+@property(nonatomic,strong)UIRefreshControl * refreshControl;
 
 @end
 
@@ -17,11 +22,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //Set up the TableView
+    self.newsTable = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.newsTable.estimatedRowHeight = UITableViewAutomaticDimension;
+    self.newsTable.rowHeight = UITableViewAutomaticDimension;
+    _newsTable.delegate = self;
+    _newsTable.dataSource = self;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.view addSubview:_newsTable];
+    
+    self.newsFetcher = [[NewsFetcher alloc]init];
+    
+    //Call the makeRequest to request the data
+    [self makeDataRequests];
+}
+
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    self.newsTable.frame = self.view.bounds;
+}
+
+-(void)makeDataRequests{
+    __weak MainTableViewController *weakSelf = self;
+    [self.newsFetcher searchNewsItemForURLString:kNewsFeedURL withCompletionBlock:^(NSString *newsTitle, NSArray *newsArray, NSError *error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(error){
+                
+                UIAlertController *alertController = [UIAlertController  alertControllerWithTitle:@"Error Alert"  message:error.localizedDescription  preferredStyle:UIAlertControllerStyleAlert];
+                [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                    [weakSelf dismissViewControllerAnimated:YES completion:nil];
+                }]];
+                    [weakSelf presentViewController:alertController animated:YES completion:nil];
+                
+                
+            }else{
+                //Parse the jsonObject and create an array and store the dictionary
+                weakSelf.title = newsTitle;
+                weakSelf.newsFeed = newsArray;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.newsTable reloadData];
+                });
+            }
+        });
+    }];
 }
 
 #pragma mark - Table view data source

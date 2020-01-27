@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainTableViewController : UITableViewController
+@interface MainTableViewController : UIViewController
+
+@property(nonatomic,strong)UITableView * newsTable;
 
 @end
 
