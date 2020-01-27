@@ -7,6 +7,7 @@
 //
 
 #import "NewsFetcher.h"
+#import "NewsBuilder.h"
 
 @implementation NewsFetcher
 
@@ -32,6 +33,8 @@
                                                   
                                                   NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:dataUTF8 options:kNilOptions error:&parseError];
                                                   NSString * title = [responseDictionary objectForKey:@"title"];
+                                                  NSArray * newsFeed = [NewsBuilder newsFromJSON:responseDictionary];
+                                                                                                   completionBlock(title,newsFeed,nil);
                                               }
                                               else
                                               {

@@ -14,6 +14,8 @@
 		D699173C23DF6EF400A44066 /* ObjCNewsParserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D699173B23DF6EF400A44066 /* ObjCNewsParserUITests.m */; };
 		D699175223DF6FAB00A44066 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175123DF6FAB00A44066 /* MainTableViewController.m */; };
 		D699175723DF718800A44066 /* NewsFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175623DF718800A44066 /* NewsFetcher.m */; };
+		D699175A23DF74CA00A44066 /* NewsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175923DF74CA00A44066 /* NewsBuilder.m */; };
+		D699175D23DF74EE00A44066 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175C23DF74EE00A44066 /* News.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		D699175123DF6FAB00A44066 /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		D699175523DF718800A44066 /* NewsFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsFetcher.h; sourceTree = "<group>"; };
 		D699175623DF718800A44066 /* NewsFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsFetcher.m; sourceTree = "<group>"; };
+		D699175823DF74CA00A44066 /* NewsBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsBuilder.h; sourceTree = "<group>"; };
+		D699175923DF74CA00A44066 /* NewsBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsBuilder.m; sourceTree = "<group>"; };
+		D699175B23DF74EE00A44066 /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		D699175C23DF74EE00A44066 /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,10 @@
 			children = (
 				D699175523DF718800A44066 /* NewsFetcher.h */,
 				D699175623DF718800A44066 /* NewsFetcher.m */,
+				D699175823DF74CA00A44066 /* NewsBuilder.h */,
+				D699175923DF74CA00A44066 /* NewsBuilder.m */,
+				D699175B23DF74EE00A44066 /* News.h */,
+				D699175C23DF74EE00A44066 /* News.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -310,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D699175223DF6FAB00A44066 /* MainTableViewController.m in Sources */,
+				D699175A23DF74CA00A44066 /* NewsBuilder.m in Sources */,
+				D699175D23DF74EE00A44066 /* News.m in Sources */,
 				D699171623DF6EF200A44066 /* AppDelegate.m in Sources */,
 				D699175723DF718800A44066 /* NewsFetcher.m in Sources */,
 				D699172723DF6EF400A44066 /* main.m in Sources */,
