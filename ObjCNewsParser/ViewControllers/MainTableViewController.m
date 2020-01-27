@@ -15,6 +15,7 @@
 @property(nonatomic,strong)NSArray * newsFeed;
 @property(nonatomic,strong)NewsFetcher * newsFetcher;
 @property(nonatomic,strong)UIRefreshControl * refreshControl;
+@property(nonatomic,strong)NSCache * cache;
 
 @end
 
@@ -33,6 +34,7 @@
     [self.view addSubview:_newsTable];
     
     self.newsFetcher = [[NewsFetcher alloc]init];
+    self.cache = [[NSCache alloc]init];
     
     //Call the makeRequest to request the data
     [self makeDataRequests];
@@ -90,7 +92,7 @@
     }
     
     News * news = _newsFeed[indexPath.row];
-    [cell setNews:news];
+    [cell setNews:news andCache:self.cache];
     
     return cell;
 

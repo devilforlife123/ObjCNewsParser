@@ -17,6 +17,7 @@
 		D699175A23DF74CA00A44066 /* NewsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175923DF74CA00A44066 /* NewsBuilder.m */; };
 		D699175D23DF74EE00A44066 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175C23DF74EE00A44066 /* News.m */; };
 		D699176023DF758F00A44066 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175F23DF758F00A44066 /* NewsTableViewCell.m */; };
+		D699176623DF776400A44066 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D699176523DF776400A44066 /* UIImageView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		D699175C23DF74EE00A44066 /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		D699175E23DF758F00A44066 /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		D699175F23DF758F00A44066 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		D699176423DF776400A44066 /* UIImageView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		D699176523DF776400A44066 /* UIImageView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				D699171423DF6EF200A44066 /* AppDelegate.h */,
 				D699171523DF6EF200A44066 /* AppDelegate.m */,
 				D699174F23DF6F5A00A44066 /* Constants.h */,
+				D699176423DF776400A44066 /* UIImageView+Extension.h */,
+				D699176523DF776400A44066 /* UIImageView+Extension.m */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 				D699171623DF6EF200A44066 /* AppDelegate.m in Sources */,
 				D699175723DF718800A44066 /* NewsFetcher.m in Sources */,
 				D699172723DF6EF400A44066 /* main.m in Sources */,
+				D699176623DF776400A44066 /* UIImageView+Extension.m in Sources */,
 				D699176023DF758F00A44066 /* NewsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

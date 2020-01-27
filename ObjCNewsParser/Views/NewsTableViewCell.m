@@ -8,6 +8,7 @@
 
 #import "NewsTableViewCell.h"
 #import "Constants.h"
+#import "UIImageView+Extension.h"
 
 @interface NewsTableViewCell () {
     
@@ -78,12 +79,34 @@
 -(void)prepareForReuse{
     
     [super prepareForReuse];
+    
+    downloadTask = nil;
+    self.sluglineLabel.text = nil;
+    self.headlineLabel.text = nil;
+    self.thumbnailImageView.image = nil;
 }
 
--(void)setNews:(News*)news{
+-(void)setNews:(News*)news andCache:(NSCache*)cache{
     self.sluglineLabel.text = news.slugline;
     self.headlineLabel.text = news.headline;
-    [self.thumbnailImageView setImage:[UIImage imageNamed:@"placeholder"]];
+    if(![news.thumbnailURL isEqual:[NSNull null]]){
+      UIImage * image = [cache objectForKey:news.thumbnailURL];
+            if(image != nil){
+                [self.thumbnailImageView setImage:image];
+            }else{
+                downloadTask = [self.thumbnailImageView loadImageWithURL:[NSURL URLWithString:news.thumbnailURL] WithCompletion:^(UIImage * image) {
+                    if(image != nil){
+                        [cache setObject:image forKey:news.thumbnailURL];
+                    }else{
+                        [cache setObject:[UIImage imageNamed:@"placeholder"] forKey:news.thumbnailURL];
+                    }
+                }];
+            }
+        
+    }else{
+         [self.thumbnailImageView setImage:[UIImage imageNamed:@"placeholder"]];
+        
+    }
 }
 
 - (void)layoutSubviews

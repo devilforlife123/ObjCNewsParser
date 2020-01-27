@@ -16,5 +16,6 @@
 @property (strong, nonatomic) UILabel *headlineLabel;
 @property (strong, nonatomic) UILabel *sluglineLabel;
 @property(nonatomic,strong)News * news;
+-(void)setNews:(News*)news andCache:(NSCache*)cache;
 
 @end
