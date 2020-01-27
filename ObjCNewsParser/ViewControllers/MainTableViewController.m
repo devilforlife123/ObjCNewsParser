@@ -10,6 +10,7 @@
 #import "NewsFetcher.h"
 #import "Constants.h"
 #import "NewsTableViewCell.h"
+#import "HudLoading.h"
 
 @interface MainTableViewController ()
 @property(nonatomic,strong)NSArray * newsFeed;
@@ -33,11 +34,35 @@
     
     [self.view addSubview:_newsTable];
     
+    //Refresh Button
+       UIBarButtonItem * button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTheData)];
+       self.navigationItem.leftBarButtonItem = button;
+    //Add the refresh Control
+       self.refreshControl = [[UIRefreshControl alloc]init];
+       [self.refreshControl addTarget:self action:@selector(refreshTheData) forControlEvents:UIControlEventValueChanged];
+       [self.newsTable addSubview:self.refreshControl];
     self.newsFetcher = [[NewsFetcher alloc]init];
     self.cache = [[NSCache alloc]init];
     
     //Call the makeRequest to request the data
     [self makeDataRequests];
+}
+
+-(void)refreshTheData{
+    //Initialize the hudloading view
+    
+    HudLoading * hudLoading
+    = [HudLoading hudLoadingInView:[self.view.window.subviews objectAtIndex:0]];
+    //Make dataRequest
+    [self makeDataRequests];
+    [self.refreshControl endRefreshing];
+    // update tableview
+    [self.newsTable performSelector:@selector(reloadData) withObject:nil afterDelay:1.0];
+    //Remove hudloading from superView
+    [hudLoading
+     performSelector:@selector(removeView)
+     withObject:nil
+     afterDelay:1.0];
 }
 
 

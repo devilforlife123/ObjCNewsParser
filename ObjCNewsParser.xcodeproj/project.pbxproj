@@ -18,6 +18,7 @@
 		D699175D23DF74EE00A44066 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175C23DF74EE00A44066 /* News.m */; };
 		D699176023DF758F00A44066 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175F23DF758F00A44066 /* NewsTableViewCell.m */; };
 		D699176623DF776400A44066 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D699176523DF776400A44066 /* UIImageView+Extension.m */; };
+		D699176923DF7A2700A44066 /* HudLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D699176823DF7A2700A44066 /* HudLoading.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		D699175F23DF758F00A44066 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		D699176423DF776400A44066 /* UIImageView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
 		D699176523DF776400A44066 /* UIImageView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
+		D699176723DF7A2700A44066 /* HudLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HudLoading.h; sourceTree = "<group>"; };
+		D699176823DF7A2700A44066 /* HudLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HudLoading.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				D699175923DF74CA00A44066 /* NewsBuilder.m */,
 				D699175B23DF74EE00A44066 /* News.h */,
 				D699175C23DF74EE00A44066 /* News.m */,
+				D699176723DF7A2700A44066 /* HudLoading.h */,
+				D699176823DF7A2700A44066 /* HudLoading.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				D699172723DF6EF400A44066 /* main.m in Sources */,
 				D699176623DF776400A44066 /* UIImageView+Extension.m in Sources */,
 				D699176023DF758F00A44066 /* NewsTableViewCell.m in Sources */,
+				D699176923DF7A2700A44066 /* HudLoading.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
