@@ -16,6 +16,7 @@
 		D699175723DF718800A44066 /* NewsFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175623DF718800A44066 /* NewsFetcher.m */; };
 		D699175A23DF74CA00A44066 /* NewsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175923DF74CA00A44066 /* NewsBuilder.m */; };
 		D699175D23DF74EE00A44066 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175C23DF74EE00A44066 /* News.m */; };
+		D699176023DF758F00A44066 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D699175F23DF758F00A44066 /* NewsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		D699175923DF74CA00A44066 /* NewsBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsBuilder.m; sourceTree = "<group>"; };
 		D699175B23DF74EE00A44066 /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		D699175C23DF74EE00A44066 /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		D699175E23DF758F00A44066 /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		D699175F23DF758F00A44066 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 		D699174B23DF6EFB00A44066 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D699175E23DF758F00A44066 /* NewsTableViewCell.h */,
+				D699175F23DF758F00A44066 /* NewsTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				D699171623DF6EF200A44066 /* AppDelegate.m in Sources */,
 				D699175723DF718800A44066 /* NewsFetcher.m in Sources */,
 				D699172723DF6EF400A44066 /* main.m in Sources */,
+				D699176023DF758F00A44066 /* NewsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
